@@ -1,0 +1,22 @@
+{
+  "name": "spotev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meganmcewan/test-frontend-spotev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meganmcewan/test-frontend-spotev/issues"
+  },
+  "homepage": "https://github.com/meganmcewan/test-frontend-spotev#readme",
+  "dependencies": {
+    "mobile-detect": "^1.4.1"
+  }
+}
