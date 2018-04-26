@@ -1,16 +1,25 @@
+/* //////////// -------- SPOT EV TEST CSS -------------///////////// */
+
+
 @font-face {
   font-family: "Circular Medium";
   src: url(CircularStd-Medium.otf);
-  font-family: 'Circular Light';
-  src: url(CircularStd-Book.otf)
+}
+
+@font-face {
+  font-family: "Circular Light";
+  src: url(CircularStd-Book.otf);
 }
 
 * {
   font-family: "Circular Medium", "Palanquin", sans-serif;
 }
 
+/* ----------MOBILE FIRST STYLE --------------- */
+
+/* --------Nav & BANNER -------- */
+
 .nav {
-  /* border: 5px solid teal; */
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -18,16 +27,12 @@
   align-items: center;
 }
 .nav-title {
-  /* border: 5px solid red; */
   margin: 0;
   font-size: 5.3vw;
 }
-/* .nav-icon {
-  border: 5px solid rgb(0, 81, 128);
-} */
 
-.nav-text-search{
-    display: none
+.nav-text-search {
+  display: none;
 }
 
 .banner {
@@ -37,29 +42,24 @@
   background-position: center;
 }
 
+/* ---------- MAIN BODY ------------ */
 .main {
   height: 60vh;
-  /* border: 5px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-/* .header {
-  border: 5px solid purple;
-} */
+
 .heading-primary {
   margin-top: 7vh;
   margin-bottom: 8vh;
   font-size: 7vw;
   padding-left: 5vw;
 }
-/* .circle-wrapper {
-  border: 5px solid olivedrab;
-} */
-
-.author {
-  /* border: 5px solid pink; */
+.text-nowrap {
+  white-space: nowrap;
 }
+
 .info {
   padding-left: 5vw;
   position: relative;
@@ -71,17 +71,10 @@
   font-size: 2vh;
 }
 
-.social {
-  /* border: 5px solid green; */
-  color: lightgrey;
-}
+/* ---------- FOOTER -------------- */
 
-.footer-icon {
-  padding-left: 5vw;
-  color: lightgrey;
-  vertical-align: middle;
-  padding-right: 10px;
-  
+.social {
+  color: #bdbdbd;
 }
 
 .footer-nav {
@@ -95,27 +88,22 @@
 }
 
 .footer-text {
-  /* border: 5px solid yellow; */
   float: none;
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 60px;
-  font-family: 'Circular Light';
+  font-family: "Circular Light";
   font-size: 3vw;
-
-}
-/* .material-icons.md-18 {
-  font-size: 18px;
-} */
-
-
-.text-nowrap {
-  white-space: nowrap;
 }
 
-/* ------////buttons & Icons //// -----*/
+/* ---------BUTTONS & ICONS --------*/
+
 .icon {
   cursor: pointer;
+}
+
+.material-icons.md-18 {
+  font-size: 3vh;
 }
 .nav-icon-menu {
   text-align: start;
@@ -126,12 +114,15 @@
   cursor: pointer;
   margin-right: 5vw;
 }
+#icon-menu-large {
+  display: none;
+}
 
 .btn-orange {
   height: 7vh;
   width: 7vh;
   border-radius: 50%;
-  background-color: #f36b24;
+  background-color: #ff6b09;
   position: relative;
   top: -4vh;
   left: -10vw;
@@ -151,9 +142,9 @@
   cursor: pointer;
 }
 .btn-grey {
-  height: 4.5vh;  
+  height: 4.5vh;
   width: 10vh;
-  border: 1px solid lightgrey;
+  border: 1px solid #bdbdbd;
   border-radius: 25px;
   color: grey;
   text-align: center;
@@ -162,83 +153,97 @@
   margin-top: 10px;
   cursor: pointer;
   font-size: 3vw;
-  font-family: 'Circular Light'
+  font-family: "Circular Light";
 }
 
 .footer-icon-arrow {
   transform: scaleX(-1);
-  margin-left: 2vw
+  margin-left: 2vw;
 }
+.footer-icons {
+  padding-left: 5vw;
+  color: #bdbdbd;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+/* -------------MEDIA QUERIES FOR TABLETS  ---------------- */
 
-/* ///////end input box ///////// */
 @media only screen and (min-width: 768px) {
+
+  /* ---------main-------- */
+
   .heading-primary {
     font-size: 4.5vh;
   }
-  .btn-grey{
+
+  .footer-text {
+    font-size: 2.5vw;
+  }
+  .footer-nav {
+    font-size: 3.2vw;
+  }
+
+  /* ---------Buttons & Icons-------- */
+
+  .btn-grey {
     font-size: 2.3vw;
-    margin-left: 2vw
-
+    margin-left: 2vw;
   }
-
-  .footer-text{
-      font-size: 2.5vw
-  }
-  .footer-nav{
-      font-size: 3.2vw
-  }
-  .footer-icon-arrow{
+  .footer-icon-arrow {
     margin-top: 1vh;
   }
-  /* .material-icons.md-24 {
+  .material-icons.md-24 {
     font-size: 24px;
-  } */
+  }
 }
 
+/* -------------MEDIA QUERIES SMALL DESKTOPS ---------------- */
+
 @media only screen and (min-width: 992px) {
-  .heading-primary {
-    font-size: 4.5vh;
-  }
-  .banner {
-    height: 100vh;
-  }
+
+  /* -----------banner & nav ---------- */
+
   .main {
     height: 95vh;
+  }
+  .header {
+    position: relative;
+    top: 30vh;
   }
   .nav {
     position: absolute;
     width: 50vw;
     justify-content: flex-start;
   }
-  .nav-text-search{
+  .nav-text-search {
+    font-family: "Circular Light";
     display: inline;
     font-size: 1.2vw;
     margin-left: 1vw;
-    align-items: center;
-}
-
-  .circle {
     position: relative;
-    top: 300px;
-    left: 10vw;
+    bottom: 0.3vh;
+  }
+  .nav-title {
+    position: relative;
+
+    text-align: end;
+  }
+  .banner {
+    height: 100vh;
   }
 
-  .header {
-    position: relative;
-    top: 30vh;
+  /* ---------main body & footer ------------- */
+
+  .heading-primary {
+    font-size: 4.5vh;
   }
+
   .info {
     padding-left: 5vw;
     position: relative;
     top: 15vh;
   }
-  .btn-grey {
-    position: relative;
-    top: -8vh;
-    left: 30vw;
-  }
   .footer-nav {
-    border: 5px solid lightblue;
     position: relative;
     top: 6vh;
     left: -25vw;
@@ -248,8 +253,24 @@
     top: 6vh;
     left: 15vw;
   }
+
+  /* --------buttons & icons ----------- */
+
+  #icon-menu-large {
+    display: block;
+  }
+  #icon-menu-small {
+    display: none;
+  }
+
+  .btn-grey {
+    position: relative;
+    top: -8vh;
+    left: 30vw;
+  }
+
   .footer-icon {
-    color: darkgrey;
+    color: #8d8d8d;
   }
 
   .btn-orange {
@@ -257,24 +278,25 @@
     transform: translate(-30vw, 40vh);
   }
 
-  .nav-title {
-    position: relative;
-    /* left: -15vw; */
-    /* text-align: start;
-         */
-  }
-
   .nav-icon-search {
-    color: darkgray;
+    color: #8d8d8d;
     text-align: start;
+    position: relative;
+    left: -5vw;
   }
-
-  
+  .nav-icon-menu {
+    margin-left: 0vw;
+  }
 }
 
+/* -------------MEDIA QUERIES FOR LARGE DESKTOPS  ---------------- */
+
 @media only screen and (min-width: 1200px) {
+
+  /* --------nav, main body, footer--------- */
+
   .nav-title {
-    font-size: 2vw
+    font-size: 1.5vw;
   }
 
   .heading-primary {
@@ -289,31 +311,30 @@
     top: 7vh;
     font-size: 2vh;
   }
-
-  .btn-orange {
-    transform: translate(-25vw, 40vh);
-  }
-
-  .btn-grey {
-    top: -15vh;
-    left: 26vw;
-    font-size: 1.2vw;
-  }
-
   .footer-nav {
     top: 6vh;
     left: -26vw;
     font-size: 1.2vw;
   }
-
   .footer-text {
     top: 6.5vh;
     left: 20vw;
-    color: darkgray;
+    color: #8d8d8d;
     font-size: 1.2vw;
   }
 
-  .footer-icon-arrow{
-      margin-top: 0.5vh
+  /* --------buttons & icons-------- */
+
+  .btn-orange {
+    transform: translate(-25vw, 40vh);
+  }
+  .btn-grey {
+    top: -15vh;
+    left: 29vw;
+    font-size: 1vw;
+  }
+
+  .footer-icon-arrow {
+    margin-top: 0vh;
   }
 }
