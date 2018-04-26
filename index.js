@@ -40,7 +40,7 @@ $(document).ready(function() {
       if (md.mobile() && Number(numVisted) + 1 == 2) {
         alert("Welcome Back!");
         console.log(
-          "user has loaded page " + (Number(numVisted) + 1) + " times!"
+          "user has loaded page " + (Number(numVisted) + 1) + " times today!"
         );
         localStorage.loadTimes = Number(numVisted) + 1 + date;
       } else {
@@ -48,7 +48,7 @@ $(document).ready(function() {
         localStorage.loadTimes = Number(numVisted) + 1 + date;
 
         console.log(
-          "user has loaded page " + (Number(numVisted) + 1) + " times!"
+          "user has loaded page " + (Number(numVisted) + 1) + " times today!"
         );
 
         isPrime(Number(numVisted) + 1) ? console.log("Prime!") : null;
@@ -57,11 +57,11 @@ $(document).ready(function() {
       //-----otherwise restart count with new date-------//
     } else {
       localStorage.loadTimes = 1 + date;
-      console.log("user has loaded page 1 time!");
+      console.log("user has loaded page 1 time today!");
     }
   } else {
     localStorage.loadTimes = 1 + date;
-    console.log("user has loaded page 1 time!");
+    console.log("user has loaded page 1 time today!");
   }
 });
 
