@@ -18,5 +18,8 @@
   "homepage": "https://github.com/meganmcewan/test-frontend-spotev#readme",
   "dependencies": {
     "mobile-detect": "^1.4.1"
+  },
+  "engines": {
+    "node": "8.9.4"
   }
 }

@@ -15,6 +15,7 @@
   font-family: "Circular Medium", "Palanquin", sans-serif;
 }
 
+
 /* ----------MOBILE FIRST STYLE --------------- */
 
 /* --------Nav & BANNER -------- */
@@ -147,10 +148,11 @@
   border: 1px solid #bdbdbd;
   border-radius: 25px;
   color: grey;
+  display: inline-block;
   text-align: center;
-  padding: 5px;
-  padding-top: 7px;
-  margin-top: 10px;
+  line-height: 4.5vh;
+  white-space: nowrap;
+    
   cursor: pointer;
   font-size: 3vw;
   font-family: "Circular Light";
@@ -182,6 +184,7 @@
   .footer-nav {
     font-size: 3.2vw;
   }
+ 
 
   /* ---------Buttons & Icons-------- */
 
@@ -210,6 +213,9 @@
     position: relative;
     top: 30vh;
   }
+  .heading-primary {
+    font-size: 4.5vh;
+  }
   .nav {
     position: absolute;
     width: 50vw;
@@ -225,14 +231,14 @@
   }
   .nav-title {
     position: relative;
-
+    font-size: 2vw;
     text-align: end;
   }
   .banner {
     height: 100vh;
   }
 
-  /* ---------main body & footer ------------- */
+  /* ---------main body & footer ---------- */
 
   .heading-primary {
     font-size: 4.5vh;
@@ -247,12 +253,16 @@
     position: relative;
     top: 6vh;
     left: -25vw;
+    font-size: 1.5vw;
   }
+
   .footer-text {
     position: relative;
     top: 6vh;
     left: 15vw;
+    font-size: 1.2vw;
   }
+
 
   /* --------buttons & icons ----------- */
 
@@ -286,6 +296,17 @@
   }
   .nav-icon-menu {
     margin-left: 0vw;
+  }
+  .btn-grey {
+    top: -7vh;
+    left: 29vw;
+    font-size: 1vw;
+  }
+  .btn-orange {
+    transform: translate(-27vw, 40vh);
+  }
+  .footer-icon-arrow {
+    margin-top: 0vh;
   }
 }
 
@@ -330,11 +351,7 @@
   }
   .btn-grey {
     top: -15vh;
-    left: 29vw;
-    font-size: 1vw;
   }
 
-  .footer-icon-arrow {
-    margin-top: 0vh;
-  }
+
 }
